@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT ME</a>
+            <a class="c" href="#">GALLERY</a>
+            <a class="d" href="#">CONTACT</a>
+        </div>
+
+        <div class="content">
+
+            <div class="home">
+                <h1>I am Shefat</h1>
+                <h3>Studing in Computer Science Engineering</h3>
+
+            </div>
+
+            <div class="aboutme">
+                <p>I was born in 1st January 1997 .<br> I was raised in <b>mohadevpur, naogaon.</b><br> At the age of five I started going to school.In 2005 I finished my primary schooling and started gong to high school in Jahangirpur girl’s school .<br>                    I achieved scholarship in class five and eight. I finished my SSC in 2010-2011 with GPA -5.00. After that I started going to college in Jahangirpur Govt. college and finished HSC in 2012-2013 with GPA -5.00.<br> In 2014 I got admitted
+                    in <b>Rajshahi University</b> at <b>Computer Science Engineering.</b>
+                </p>
+            </div>
+
+            <div class="gallery">
+                <h1>Hello this is my Gallery</h1>
+                <div class="image">
+                    <img src="images/1.JPG" alt="image">
+                </div>
+                <div class="image">
+                    <img src="images/2.JPG" alt="image">
+                </div>
+                <div class="image">
+                    <img src="images/3.jpg" alt="image">
+                </div>
+                <div class="image">
+                    <img src="images/4.jpg" alt="image">
+                </div>
+				<div class="image">
+                    <img src="images/5.jpg" alt="image">
+                </div>
+            </div>
+
+            <div class="contactme">
+                <div class="contactform">
+                    <form action="mailto:shefat.cseru@gmail.com" method="post" enctype="text/plain">
+                        <input type="text" name="" class="inputtext" placeholder="First Name" value="">
+                        <input type="text" name="" class="inputtext" placeholder="Last Name " value="">
+                        <input type="text" name="" class="inputtext" value="" placeholder="E-mail">
+                        <textarea cols="4" rows="6" class="inputmessage" placeholder="Your Messages...!!!"></textarea>
+                        <input type="submit" name="" class="submitbutton">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('a').click(function() {
+                //alart("i am click");
+                var selected = $(this);
+                $('a').removeClass('active');
+                $(selected).addClass('active');
+            });
+
+            var $a = $('.a'),
+                $b = $('.b'),
+                $c = $('.c'),
+                $d = $('.d'),
+                $home = $('.home'),
+                $aboutme = $('.aboutme'),
+                $gallery = $('.gallery'),
+                $contactme = $('.contactme');
+
+            $a.click(function() {
+                $home.fadeIn();
+                $aboutme.fadeOut();
+                $gallery.fadeOut();
+                $contactme.fadeOut();
+            });
+
+            $b.click(function() {
+                $aboutme.fadeIn();
+                $home.fadeOut();
+                $gallery.fadeOut();
+                $contactme.fadeOut();
+            });
+
+            $c.click(function() {
+                $gallery.fadeIn();
+                $aboutme.fadeOut();
+                $home.fadeOut();
+                $contactme.fadeOut();
+            });
+
+            $d.click(function() {
+                $contactme.fadeIn();
+                $aboutme.fadeOut();
+                $home.fadeOut();
+                $gallery.fadeOut();
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>
